@@ -11,6 +11,9 @@
 		4055F9CA2783339D0040D5B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4055F9C92783339D0040D5B6 /* ContentView.swift */; };
 		4055F9CC278333A30040D5B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4055F9CB278333A30040D5B6 /* Assets.xcassets */; };
 		4055F9CF278333A30040D5B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4055F9CE278333A30040D5B6 /* Preview Assets.xcassets */; };
+		4055F9D727833FB20040D5B6 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 4055F9D627833FB20040D5B6 /* CodeScanner */; };
+		4055F9D9278347BD0040D5B6 /* QrCodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4055F9D8278347BD0040D5B6 /* QrCodeScannerView.swift */; };
+		4055F9DB278493A30040D5B6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4055F9DA278493A30040D5B6 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,8 @@
 		4055F9C92783339D0040D5B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4055F9CB278333A30040D5B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4055F9CE278333A30040D5B6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4055F9D8278347BD0040D5B6 /* QrCodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeScannerView.swift; sourceTree = "<group>"; };
+		4055F9DA278493A30040D5B6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4055F9D727833FB20040D5B6 /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,6 +41,7 @@
 		4055F9BB2783339D0040D5B6 = {
 			isa = PBXGroup;
 			children = (
+				4055F9DA278493A30040D5B6 /* .gitignore */,
 				4055F9C62783339D0040D5B6 /* AgeChecker */,
 				4055F9C52783339D0040D5B6 /* Products */,
 			);
@@ -55,6 +62,7 @@
 				4055F9C92783339D0040D5B6 /* ContentView.swift */,
 				4055F9CB278333A30040D5B6 /* Assets.xcassets */,
 				4055F9CD278333A30040D5B6 /* Preview Content */,
+				4055F9D8278347BD0040D5B6 /* QrCodeScannerView.swift */,
 			);
 			path = AgeChecker;
 			sourceTree = "<group>";
@@ -83,6 +91,9 @@
 			dependencies = (
 			);
 			name = AgeChecker;
+			packageProductDependencies = (
+				4055F9D627833FB20040D5B6 /* CodeScanner */,
+			);
 			productName = AgeChecker;
 			productReference = 4055F9C42783339D0040D5B6 /* AgeChecker.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 4055F9BB2783339D0040D5B6;
+			packageReferences = (
+				4055F9D527833FB20040D5B6 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = 4055F9C52783339D0040D5B6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4055F9CF278333A30040D5B6 /* Preview Assets.xcassets in Resources */,
+				4055F9DB278493A30040D5B6 /* .gitignore in Resources */,
 				4055F9CC278333A30040D5B6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4055F9D9278347BD0040D5B6 /* QrCodeScannerView.swift in Sources */,
 				4055F9CA2783339D0040D5B6 /* ContentView.swift in Sources */,
 				4055F9C82783339D0040D5B6 /* AgeCheckerApp.swift in Sources */,
 			);
@@ -272,11 +288,13 @@
 				DEVELOPMENT_TEAM = 7QS6VD4LU3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Kameran behövs för att skanna QR-kod";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,11 +319,13 @@
 				DEVELOPMENT_TEAM = 7QS6VD4LU3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Kameran behövs för att skanna QR-kod";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -341,6 +361,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4055F9D527833FB20040D5B6 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4055F9D627833FB20040D5B6 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4055F9D527833FB20040D5B6 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4055F9BC2783339D0040D5B6 /* Project object */;
 }
